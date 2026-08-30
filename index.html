@@ -1,4 +1,21 @@
-<title>Josué Santos — Data Engineer</title>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Josué Santos | Engenheiro de Dados</title>
+<meta name="description" content="Portfólio de Josué Santos: projetos de Engenharia de Dados e Analytics Engineering com Python, SQL, Airflow, PySpark, Delta Lake e dbt.">
+<meta name="author" content="Josué Santos">
+<meta name="theme-color" content="#060818">
+<link rel="canonical" href="https://santosalmeida1708.github.io/page/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Josué Santos | Engenheiro de Dados">
+<meta property="og:description" content="Pipelines confiáveis, arquiteturas Lakehouse e modelos analíticos construídos com tecnologias modernas de dados.">
+<meta property="og:url" content="https://santosalmeida1708.github.io/page/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Josué Santos | Engenheiro de Dados">
+<meta name="twitter:description" content="Projetos de Engenharia de Dados, Lakehouse e Analytics Engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 
@@ -46,6 +63,7 @@ body {
   color: var(--text);
 }
 .nav-logo span { color: var(--cyan); }
+.version-badge { color: var(--muted); font: 500 9px 'JetBrains Mono', monospace; margin-left: 6px; }
 
 .nav-tabs {
   display: flex; gap: 4px;
@@ -812,6 +830,10 @@ body {
   position: relative;
 }
 .tool-logo-wrap svg { width: 52px; height: 52px; }
+.tool-logo-wrap img { width: 54px; height: 54px; object-fit: contain; display: block; }
+.tool-logo-wrap .dbt-logo { width: 68px; height: 42px; }
+.tool-logo-pair { display: flex; align-items: center; gap: 6px; }
+.tool-logo-pair img { width: 30px; height: 30px; }
 
 .tool-card-name {
   font-family: 'Space Grotesk', sans-serif;
@@ -937,22 +959,158 @@ body {
 .modal-link:hover { filter: brightness(1.1); transform: translateY(-1px); }
 .modal-link svg { width: 16px; height: 16px; }
 
+/* ─── PROFESSIONAL POSITIONING & ACCESSIBILITY ─────────────── */
+:root { --muted: #9aacca; }
+
+.skip-link {
+  position: fixed; top: 8px; left: 8px; z-index: 999;
+  padding: 10px 14px; border-radius: 8px;
+  background: var(--cyan); color: var(--bg); font-weight: 700;
+  transform: translateY(-150%); transition: transform .2s;
+}
+.skip-link:focus { transform: translateY(0); }
+
+:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.nav-dot { border: 0; padding: 0; }
+
+#p-home {
+  grid-template-columns: minmax(360px, 1.1fr) minmax(320px, .9fr) 360px;
+  padding: 32px 48px;
+}
+.home-bio { color: #aebbd1; margin-bottom: 28px; }
+.home-cta { flex-wrap: wrap; }
+.btn-primary, .btn-ghost { cursor: pointer; border: 1px solid transparent; }
+.credentials-block { margin-top: 24px; max-width: 610px; }
+.credentials-title {
+  color: var(--muted); font: 500 10px/1.4 'JetBrains Mono', monospace;
+  letter-spacing: .16em; text-transform: uppercase; margin-bottom: 10px;
+}
+.credentials-list { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+.credential {
+  display: inline-flex; align-items: center; gap: 7px;
+  min-height: 32px; padding: 6px 10px;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: rgba(17,24,48,.78); color: #cbd6e7;
+  font: 500 10px/1.3 'JetBrains Mono', monospace;
+}
+.credential-mark {
+  display: inline-grid; place-items: center; min-width: 19px; height: 19px;
+  padding: 0 4px; border-radius: 5px; background: rgba(0,212,255,.12);
+  color: var(--cyan); font-size: 8px; font-weight: 700;
+}
+.credential.microsoft .credential-mark { background: rgba(0,120,212,.16); color: #55b5ff; }
+.credential.itil .credential-mark { background: rgba(124,58,237,.18); color: #b79aff; }
+.credential.pmi .credential-mark { background: rgba(249,115,22,.16); color: #ff9a55; }
+.credential.hdi .credential-mark { background: rgba(57,229,140,.12); color: #58e9a0; }
+.home-manifesto { align-self: center; }
+.about-card { padding: 32px; }
+.about-kicker {
+  color: var(--cyan); font: 500 11px/1.4 'JetBrains Mono', monospace;
+  letter-spacing: .18em; text-transform: uppercase; margin-bottom: 14px;
+}
+.about-card h2 {
+  font: 700 clamp(24px, 2.1vw, 32px)/1.15 'Space Grotesk', sans-serif;
+  margin-bottom: 16px;
+}
+.about-copy { color: #b4c0d4; font-size: 14px; line-height: 1.75; margin-bottom: 16px; }
+.about-copy strong { color: var(--text); }
+.about-points { display: grid; gap: 10px; margin: 22px 0; list-style: none; }
+.about-points li { display: flex; gap: 10px; color: #c5cede; font-size: 13px; line-height: 1.55; }
+.about-points li::before { content: '✓'; color: var(--cyan); font-weight: 800; }
+.availability {
+  display: flex; gap: 10px; align-items: center; padding: 12px 14px;
+  border: 1px solid rgba(0,212,255,.25); border-radius: 10px;
+  background: rgba(0,212,255,.06); color: #c7f6ff; font-size: 13px;
+}
+.availability-dot { width: 8px; height: 8px; border-radius: 50%; background: #39e58c; box-shadow: 0 0 12px #39e58c; }
+
+.portfolio-intro { max-width: 720px; margin: -20px auto 28px; text-align: center; color: #aebbd1; line-height: 1.7; }
+.featured-label {
+  max-width: 1200px; margin: 0 auto 14px; color: var(--cyan);
+  font: 500 11px/1.4 'JetBrains Mono', monospace; letter-spacing: .16em; text-transform: uppercase;
+}
+.proj-card.featured { border-color: rgba(0,212,255,.48); background: linear-gradient(145deg, #121d38, var(--card)); }
+.proj-card.featured::after {
+  content: 'PROJETO EM DESTAQUE'; position: absolute; top: 0; right: 18px;
+  padding: 5px 10px; background: var(--cyan); color: var(--bg);
+  font: 700 8px/1.2 'JetBrains Mono', monospace; letter-spacing: .1em;
+  border-radius: 0 0 7px 7px;
+}
+.proj-outcome { margin: 12px 0 16px; color: #cbd6e7; font-size: 12px; line-height: 1.55; }
+.proj-outcome strong { color: var(--cyan); }
+.proj-link { padding: 6px 8px; border-radius: 6px; }
+.proj-card a[target="_blank"]::after { content: ' ↗'; }
+
+.contact-strip {
+  max-width: 1200px; margin: 34px auto 0; padding: 26px 30px;
+  border: 1px solid var(--border); border-radius: 18px;
+  background: linear-gradient(120deg, rgba(0,212,255,.08), rgba(124,58,237,.09));
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.contact-strip h3 { font: 700 23px/1.2 'Space Grotesk', sans-serif; margin-bottom: 7px; }
+.contact-strip p { color: #aebbd1; line-height: 1.6; }
+.contact-email { color: var(--cyan); text-decoration: none; }
+.contact-email:hover { text-decoration: underline; }
+.contact-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+@media (max-width: 1180px) {
+  #p-home { grid-template-columns: 1fr 1fr; overflow-y: auto; }
+  .home-right { display: none; }
+  .tools-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  body { overflow: hidden; }
+  #nav { height: auto; min-height: var(--nav-h); padding: 10px 14px; gap: 10px; }
+  .nav-logo { font-size: 16px; }
+  .nav-tabs { overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+  .nav-tab { white-space: nowrap; padding: 8px 12px; }
+  .nav-dot-track { display: none; }
+  #panels { top: 74px; height: calc(100vh - 74px); }
+  #p-home { display: block; padding: 40px 22px 70px; overflow-y: auto; }
+  .home-left { min-height: auto; }
+  .home-manifesto { display: block; margin-top: 42px; }
+  .home-right { display: none; }
+  .home-name { font-size: clamp(46px, 14vw, 68px); }
+  .stats-row { flex-wrap: wrap; }
+  .floating-tags { flex-wrap: wrap; }
+  #p-skills, #p-portfolio, #p-tools { padding: 34px 18px 70px; }
+  .pipeline-diagram { overflow-x: auto; justify-content: flex-start; padding-bottom: 10px; }
+  .projects-grid, .tools-grid { grid-template-columns: 1fr; }
+  .contact-strip { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 560px) {
+  .nav-logo { display: none; }
+  .nav-tabs { width: 100%; }
+  .home-cta > * { width: 100%; justify-content: center; }
+  .filter-bar, .tools-filter-row { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+  .filter-btn, .tools-filter-btn { flex: 0 0 auto; }
+  .about-card { padding: 24px 20px; }
+  .section-title { font-size: 32px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
 </style>
+</head>
+<body>
+<a class="skip-link" href="#p-home">Ir para o conteúdo</a>
 
 <!-- NAV -->
-<nav id="nav">
-  <div class="nav-logo">JS <span>//</span> data</div>
+<nav id="nav" aria-label="Navegação principal">
+  <div class="nav-logo">JS <span>//</span> data <small class="version-badge">v3</small></div>
   <div class="nav-tabs">
-    <button class="nav-tab active" data-panel="p-home">Home</button>
-    <button class="nav-tab" data-panel="p-skills">Stack</button>
-    <button class="nav-tab" data-panel="p-portfolio">Portfólio</button>
-    <button class="nav-tab" data-panel="p-tools">Caixa de Ferramentas</button>
+    <button type="button" class="nav-tab active" data-panel="p-home" aria-current="page">Home</button>
+    <button type="button" class="nav-tab" data-panel="p-skills">Stack</button>
+    <button type="button" class="nav-tab" data-panel="p-portfolio">Portfólio</button>
+    <button type="button" class="nav-tab" data-panel="p-tools">Ferramentas</button>
   </div>
   <div class="nav-dot-track">
-    <div class="nav-dot active" data-panel="p-home"></div>
-    <div class="nav-dot" data-panel="p-skills"></div>
-    <div class="nav-dot" data-panel="p-portfolio"></div>
-    <div class="nav-dot" data-panel="p-tools"></div>
+    <button type="button" class="nav-dot active" data-panel="p-home" aria-label="Ir para início"></button>
+    <button type="button" class="nav-dot" data-panel="p-skills" aria-label="Ir para stack"></button>
+    <button type="button" class="nav-dot" data-panel="p-portfolio" aria-label="Ir para portfólio"></button>
+    <button type="button" class="nav-dot" data-panel="p-tools" aria-label="Ir para ferramentas"></button>
   </div>
 </nav>
 
@@ -973,9 +1131,9 @@ body {
         <span id="typing-text"></span><span id="cursor"></span>
       </div>
       <p class="home-bio">
-        Pipelines de dados robustas e escaláveis,
+        Desenvolvo <strong>pipelines de dados robustos e escaláveis</strong>,
         desde a ingestão via APIs até arquiteturas Lakehouse com
-        PySpark + Delta Lake, orquestradas com Apache Airflow
+        PySpark e Delta Lake, orquestradas com Apache Airflow
         e modeladas com dbt.
       </p>
       <div class="stats-row">
@@ -993,12 +1151,25 @@ body {
         </div>
       </div>
       <div class="home-cta">
-        <a href="https://linkedin.com/in/santosalmeida1708" target="_blank" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn
-        </a>
-        <a href="https://github.com/santosalmeida1708" target="_blank" class="btn-ghost">
+        <button type="button" class="btn-primary panel-trigger" data-panel="p-portfolio">Ver projetos</button>
+        <a href="assets/Josue_Santos_Data_Engineer.pdf" download class="btn-ghost" aria-label="Baixar currículo de Josué Santos em PDF">Baixar currículo ↓</a>
+        <a href="https://www.linkedin.com/in/josu%C3%A9-santos231119/" target="_blank" rel="noopener noreferrer" class="btn-ghost" aria-label="Abrir LinkedIn de Josué Santos">LinkedIn ↗</a>
+        <a href="https://github.com/santosalmeida1708" target="_blank" rel="noopener noreferrer" class="btn-ghost" aria-label="Abrir GitHub de Josué Santos">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub
         </a>
+      </div>
+      <div class="credentials-block" aria-labelledby="credentials-title">
+        <div class="credentials-title" id="credentials-title">Certificações &amp; credenciais</div>
+        <ul class="credentials-list">
+          <li class="credential microsoft" title="Microsoft Certified: Power BI Data Analyst Associate"><span class="credential-mark">MS</span>PL-300</li>
+          <li class="credential itil" title="ITIL 4 Foundation"><span class="credential-mark">ITIL</span>Foundation</li>
+          <li class="credential itil" title="ITIL 4 Practitioner: Incident Management"><span class="credential-mark">ITIL</span>Incident Management</li>
+          <li class="credential pmi" title="PMI Certified Associate in Project Management"><span class="credential-mark">PMI</span>CAPM</li>
+          <li class="credential" title="KCS Knowledge-Centered Service"><span class="credential-mark">KCS</span>Knowledge-Centered Service</li>
+          <li class="credential hdi" title="HDI Support Center Analyst"><span class="credential-mark">HDI</span>SCA</li>
+          <li class="credential hdi" title="HDI Technical Support Professional"><span class="credential-mark">HDI</span>TSPS</li>
+          <li class="credential" title="Scrum Foundation"><span class="credential-mark">SF</span>Scrum Foundation</li>
+        </ul>
       </div>
       <div class="floating-tags">
         <span class="float-tag">Apache Airflow</span>
@@ -1008,66 +1179,27 @@ body {
       </div>
     </div>
 
-    <!-- CENTER: Data manifesto -->
+    <!-- CENTER: Professional profile -->
     <div class="home-manifesto">
-      <div class="manifesto-card">
-        <div class="manifesto-eyebrow">Dados na era da IA</div>
-
-        <p class="manifesto-text">
-          A datasphere global ultrapassa <strong>175 zettabytes</strong> em 2026,
-          segundo estudos recentes sobre crescimento de dados. Sensores industriais, transações financeiras,
-          logs de sistemas, eventos de usuário e dispositivos conectados
-          geram informação a cada milissegundo. Nunca houve tanto dado disponível.
+      <div class="manifesto-card about-card">
+        <div class="about-kicker">Experiência + Engenharia de Dados</div>
+        <h2>Dados confiáveis para decisões melhores</h2>
+        <p class="about-copy">
+          Minha trajetória combina experiência em <strong>infraestrutura, ITSM,
+          governança e indicadores operacionais</strong> com formação prática em
+          Engenharia de Dados.
         </p>
-
-        <p class="manifesto-text">
-          Mas volume não é valor. Pesquisas do setor estimam que a
-          <strong>má qualidade de dados custa US$ 12,9 milhões por ano</strong>
-          a cada organização, em média. Artigos especializados apontam que
-          <strong>85% dos projetos de IA não chegam à produção</strong>,
-          e o principal gargalo é sempre o mesmo: dados inconsistentes,
-          pipelines frágeis e falta de uma estrutura confiável de ingestão.
+        <p class="about-copy">
+          Construo projetos de ponta a ponta com foco em qualidade, rastreabilidade,
+          idempotência e automação — do consumo da fonte à camada pronta para análise.
         </p>
-
-        <div class="manifesto-divider"></div>
-
-        <p class="manifesto-text">
-          Vivemos a era dos grandes modelos de linguagem, do aprendizado de máquina
-          e da inteligência artificial generativa. Mas toda essa capacidade
-          computacional depende de uma verdade simples: <strong>um modelo
-          é tão bom quanto os dados com que foi treinado.</strong>
-        </p>
-
-        <p class="manifesto-text">
-          Estudos de mercado indicam que empresas orientadas a dados têm
-          <strong>23 vezes mais chance de adquirir clientes</strong> e
-          6 vezes mais chance de reter. Ainda assim, 73% dos dados
-          corporativos nunca são usados para análise, segundo relatórios do setor.
-          O problema não é falta de dado. É falta de estrutura.
-        </p>
-
-        <div class="manifesto-highlight">
-          Engenharia de Dados não é infraestrutura de suporte.
-          É o alicerce que torna a IA possível e os dados confiáveis.
-        </div>
-        <div class="manifesto-source">
-          Fontes: Relatórios setoriais 2022-2024 · Pesquisas sobre qualidade de dados · Análises sobre adoção de IA · Estudos de impacto de dados em negócios
-        </div>
-
-        <div class="manifesto-metric-row">
-          <div class="m-metric">
-            <div class="m-metric-n">175<span style="font-size:10px">ZB</span></div>
-            <div class="m-metric-label">datasphere global</div>
-          </div>
-          <div class="m-metric">
-            <div class="m-metric-n">85<span style="font-size:10px">%</span></div>
-            <div class="m-metric-label">IAs falham sem DE</div>
-          </div>
-          <div class="m-metric">
-            <div class="m-metric-n">73<span style="font-size:10px">%</span></div>
-            <div class="m-metric-label">dados nunca usados</div>
-          </div>
-        </div>
+        <ul class="about-points">
+          <li>Pipelines batch e incrementais orquestrados com Airflow</li>
+          <li>Arquiteturas Lakehouse com PySpark e Delta Lake</li>
+          <li>Modelagem analítica, testes e documentação com dbt</li>
+          <li>Visão de operação, governança, SLA e valor para o negócio</li>
+        </ul>
+        <div class="availability"><span class="availability-dot"></span>Aberto a conexões e oportunidades em Engenharia de Dados</div>
       </div>
     </div>
 
@@ -1248,12 +1380,15 @@ body {
       <h2 class="section-title">Portfólio de Dados</h2>
     </div>
 
+    <p class="portfolio-intro">Projetos de ponta a ponta que documentam o problema, a arquitetura, as decisões técnicas e o código. Os destaques reúnem processamento, qualidade e modelagem analítica.</p>
+
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">Todos</button>
       <button class="filter-btn" data-filter="de">Data Engineering</button>
       <button class="filter-btn" data-filter="ae">Analytics Engineering</button>
     </div>
 
+    <div class="featured-label">Projetos e estudos de caso</div>
     <div class="projects-grid">
 
       <div class="proj-card" data-type="de">
@@ -1274,7 +1409,7 @@ body {
         </div>
       </div>
 
-      <div class="proj-card" data-type="de">
+      <div class="proj-card featured" data-type="de">
         <div class="proj-header">
           <span class="proj-badge badge-de">Data Engineering</span>
           <a href="https://github.com/santosalmeida1708/ecommerce-lakehouse-spark" target="_blank" class="proj-link">
@@ -1284,6 +1419,7 @@ body {
         </div>
         <div class="proj-name">E-Commerce Lakehouse</div>
         <div class="proj-desc">Arquitetura Medallion Bronze, Silver e Gold com PySpark e Delta Lake. ACID transactions, particionamento e RFM em escala.</div>
+        <div class="proj-outcome"><strong>Diferencial:</strong> camadas rastreáveis, transações ACID e dados preparados para análise RFM.</div>
         <div class="proj-tags">
           <span class="proj-tag">PySpark 3.4</span>
           <span class="proj-tag">Delta Lake</span>
@@ -1310,7 +1446,7 @@ body {
         </div>
       </div>
 
-      <div class="proj-card" data-type="de">
+      <div class="proj-card featured" data-type="de">
         <div class="proj-header">
           <span class="proj-badge badge-de">Data Engineering</span>
           <a href="https://github.com/santosalmeida1708/retail-sales-etl-pipeline" target="_blank" class="proj-link">
@@ -1320,6 +1456,7 @@ body {
         </div>
         <div class="proj-name">Retail Sales Pipeline</div>
         <div class="proj-desc">Pipeline Airflow + dbt com enrichment de câmbio via AwesomeAPI e data quality checks antes do modelo analítico.</div>
+        <div class="proj-outcome"><strong>Diferencial:</strong> integração entre orquestração, enriquecimento externo e validações antes do consumo.</div>
         <div class="proj-tags">
           <span class="proj-tag">Airflow</span>
           <span class="proj-tag">dbt</span>
@@ -1346,7 +1483,7 @@ body {
         </div>
       </div>
 
-      <div class="proj-card" data-type="ae">
+      <div class="proj-card featured" data-type="ae">
         <div class="proj-header">
           <span class="proj-badge badge-ae">Analytics Engineering</span>
           <a href="https://github.com/santosalmeida1708/olist-ecommerce-dbt" target="_blank" class="proj-link">
@@ -1356,6 +1493,7 @@ body {
         </div>
         <div class="proj-name">Olist E-Commerce Analytics</div>
         <div class="proj-desc">100k pedidos modelados com dbt: RFM com NTILE(5), Cohort Analysis de retenção mensal e OTIF por estado.</div>
+        <div class="proj-outcome"><strong>Diferencial:</strong> 100 mil pedidos transformados em segmentação, retenção e indicadores operacionais.</div>
         <div class="proj-tags">
           <span class="proj-tag">dbt</span>
           <span class="proj-tag">PostgreSQL</span>
@@ -1437,6 +1575,19 @@ body {
       </div>
 
     </div>
+
+    <div class="contact-strip" id="contato">
+      <div>
+        <h3>Vamos construir dados confiáveis?</h3>
+        <p>Estou aberto a conexões, feedbacks e oportunidades em Engenharia de Dados e Analytics Engineering.<br><a class="contact-email" href="mailto:santosalmeidajs@gmail.com">santosalmeidajs@gmail.com</a></p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn-primary" href="mailto:santosalmeidajs@gmail.com">Enviar e-mail</a>
+        <a class="btn-primary" href="https://www.linkedin.com/in/josu%C3%A9-santos231119/" target="_blank" rel="noopener noreferrer">Conversar no LinkedIn ↗</a>
+        <a class="btn-ghost" href="assets/Josue_Santos_Data_Engineer.pdf" download>Baixar currículo ↓</a>
+        <a class="btn-ghost" href="https://github.com/santosalmeida1708" target="_blank" rel="noopener noreferrer">Explorar GitHub ↗</a>
+      </div>
+    </div>
   </section>
 
 
@@ -1460,9 +1611,9 @@ body {
   </section>
 
   <!-- ── TOOL MODAL ── -->
-  <div id="tool-modal">
-    <div class="tool-modal-box">
-      <button class="modal-close" id="modal-close">&#x2715;</button>
+  <div id="tool-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="tool-modal-box" tabindex="-1">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Fechar detalhes da ferramenta">&#x2715;</button>
       <div class="modal-header">
         <div class="modal-logo" id="modal-logo"></div>
         <div>
@@ -1484,7 +1635,7 @@ body {
       </div>
       <div class="modal-section">
         <div class="modal-section-title">Site Oficial</div>
-        <a class="modal-link" id="modal-link" href="#" target="_blank" rel="noopener">
+        <a class="modal-link" id="modal-link" href="#" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
           Visitar Site Oficial
         </a>
@@ -1498,6 +1649,7 @@ body {
 // ─── PANEL NAVIGATION ──────────────────────────────────────────────
 const panelIds = ['p-home', 'p-skills', 'p-portfolio', 'p-tools'];
 let currentIdx = 0;
+const panelHashes = { 'p-home': 'inicio', 'p-skills': 'stack', 'p-portfolio': 'portfolio', 'p-tools': 'ferramentas' };
 
 function switchPanel(targetId) {
   const targetIdx = panelIds.indexOf(targetId);
@@ -1509,6 +1661,9 @@ function switchPanel(targetId) {
   panels.forEach((p, i) => {
     p.classList.remove('active', 'prev');
     const idx = panelIds.indexOf(p.id);
+    const isTarget = idx === targetIdx;
+    p.toggleAttribute('inert', !isTarget);
+    p.setAttribute('aria-hidden', isTarget ? 'false' : 'true');
     if (idx === currentIdx) {
       p.classList.add('prev');
       p.style.transform = direction > 0 ? 'translateX(-100%)' : 'translateX(100%)';
@@ -1526,18 +1681,21 @@ function switchPanel(targetId) {
   // update nav
   document.querySelectorAll('.nav-tab').forEach(t => {
     t.classList.toggle('active', t.dataset.panel === targetId);
+    if (t.dataset.panel === targetId) t.setAttribute('aria-current', 'page');
+    else t.removeAttribute('aria-current');
   });
   document.querySelectorAll('.nav-dot').forEach(d => {
     d.classList.toggle('active', d.dataset.panel === targetId);
   });
 
   currentIdx = targetIdx;
+  history.replaceState(null, '', '#' + panelHashes[targetId]);
 
   // trigger skill bars on skills panel
   if (targetId === 'p-skills') setTimeout(animateBars, 400);
 }
 
-document.querySelectorAll('.nav-tab, .nav-dot').forEach(el => {
+document.querySelectorAll('.nav-tab, .nav-dot, .panel-trigger').forEach(el => {
   el.addEventListener('click', () => switchPanel(el.dataset.panel));
 });
 
@@ -1729,9 +1887,14 @@ function animateBars() {
 
 // ─── PORTFOLIO FILTER ────────────────────────────────────────────
 document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     const filter = btn.dataset.filter;
     document.querySelectorAll('.proj-card').forEach(card => {
       const show = filter === 'all' || card.dataset.type === filter;
@@ -1742,7 +1905,16 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 
 // ─── INIT PANEL POSITIONS ────────────────────────────────────────
 document.querySelectorAll('.panel').forEach((p, i) => {
-  if (i > 0) p.style.transform = 'translateX(100%)';
+  const isInitial = i === 0;
+  p.toggleAttribute('inert', !isInitial);
+  p.setAttribute('aria-hidden', isInitial ? 'false' : 'true');
+  if (!isInitial) p.style.transform = 'translateX(100%)';
+});
+const initialPanel = Object.keys(panelHashes).find(id => panelHashes[id] === location.hash.slice(1));
+if (initialPanel && initialPanel !== 'p-home') switchPanel(initialPanel);
+
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+  link.setAttribute('rel', 'noopener noreferrer');
 });
 
 // ─── TOOLS PANEL ──────────────────────────────────────────────────
@@ -1984,18 +2156,33 @@ const TOOLS_DATA = [
   }
 ];
 
+const OFFICIAL_LOGOS = {
+  python: '<img src="assets/python.svg" alt="Logo do Python">',
+  airflow: '<img src="assets/apacheairflow.svg" alt="Logo do Apache Airflow">',
+  spark: '<img src="assets/apachespark.svg" alt="Logo do Apache Spark">',
+  delta: '<img src="assets/delta.svg" alt="Logo do Delta Lake">',
+  dbt: '<img class="dbt-logo" src="assets/dbt.svg" alt="Logo do dbt">',
+  sql: '<img src="assets/sql.svg" alt="Símbolo SQL">',
+  postgres: '<img src="assets/postgresql.svg" alt="Logo do PostgreSQL">',
+  kafka: '<img src="assets/apachekafka.svg" alt="Logo do Apache Kafka">',
+  docker: '<img src="assets/docker.svg" alt="Logo do Docker">',
+  git: '<span class="tool-logo-pair"><img src="assets/git.svg" alt="Logo do Git"><img src="assets/github.svg" alt="Logo do GitHub"></span>',
+  parquet: '<img src="assets/apacheparquet.svg" alt="Logo do Apache Parquet">',
+  duckdb: '<img src="assets/duckdb.svg" alt="Logo do DuckDB">'
+};
+
 function renderTools(filter) {
   const grid = document.getElementById('tools-grid');
   if (!grid) return;
   const filtered = filter === 'all' ? TOOLS_DATA : TOOLS_DATA.filter(t => t.cat === filter);
   grid.innerHTML = filtered.map(t => `
-    <div class="tool-card" data-color="${t.color}" data-id="${t.id}">
+    <button type="button" class="tool-card" data-color="${t.color}" data-id="${t.id}" aria-label="Ver detalhes sobre ${t.name}">
       <div class="tool-logo-wrap" style="background:${t.bg}">
-        ${t.icon}
+        ${OFFICIAL_LOGOS[t.id] || t.icon}
       </div>
       <div class="tool-card-name">${t.name}</div>
       <div class="tool-card-tagline">${t.tagline}</div>
-    </div>
+    </button>
   `).join('');
   grid.querySelectorAll('.tool-card').forEach(card => {
     card.addEventListener('click', () => openToolModal(card.dataset.id));
@@ -2004,13 +2191,19 @@ function renderTools(filter) {
 renderTools('all');
 
 document.querySelectorAll('.tools-filter-btn').forEach(btn => {
+  btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.tools-filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tools-filter-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     renderTools(btn.dataset.cat);
   });
 });
 
+let lastFocusedElement = null;
 function openToolModal(id) {
   const t = TOOLS_DATA.find(x => x.id === id);
   if (!t) return;
@@ -2030,18 +2223,28 @@ function openToolModal(id) {
   link.href = t.site || t.docs;
   link.style.background = t.accent;
   link.style.color = '#060818';
-  document.getElementById('tool-modal').classList.add('open');
+  lastFocusedElement = document.activeElement;
+  const modal = document.getElementById('tool-modal');
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  modal.querySelector('.tool-modal-box').focus();
 }
 
-document.getElementById('modal-close').addEventListener('click', () => {
-  document.getElementById('tool-modal').classList.remove('open');
-});
+function closeToolModal() {
+  const modal = document.getElementById('tool-modal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  if (lastFocusedElement) lastFocusedElement.focus();
+}
+document.getElementById('modal-close').addEventListener('click', closeToolModal);
 document.getElementById('tool-modal').addEventListener('click', e => {
   if (e.target === document.getElementById('tool-modal'))
-    document.getElementById('tool-modal').classList.remove('open');
+    closeToolModal();
 });
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') document.getElementById('tool-modal').classList.remove('open');
+  if (e.key === 'Escape') closeToolModal();
 });
 
 </script>
+</body>
+</html>
