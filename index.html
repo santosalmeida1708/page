@@ -980,28 +980,29 @@ body {
 .home-bio { color: #aebbd1; margin-bottom: 28px; }
 .home-cta { flex-wrap: wrap; }
 .btn-primary, .btn-ghost { cursor: pointer; border: 1px solid transparent; }
-.credentials-block { margin-top: 24px; max-width: 610px; }
+.credentials-block { margin-top: 24px; max-width: 720px; }
 .credentials-title {
   color: var(--muted); font: 500 10px/1.4 'JetBrains Mono', monospace;
   letter-spacing: .16em; text-transform: uppercase; margin-bottom: 10px;
 }
-.credentials-list { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+.credentials-list {
+  display: grid; grid-template-columns: repeat(4, minmax(130px, 1fr));
+  gap: 9px; list-style: none;
+}
 .credential {
-  display: inline-flex; align-items: center; gap: 7px;
-  min-height: 32px; padding: 6px 10px;
+  display: flex; align-items: center; gap: 9px;
+  min-height: 54px; padding: 7px 9px;
   border: 1px solid var(--border); border-radius: 8px;
   background: rgba(17,24,48,.78); color: #cbd6e7;
-  font: 500 10px/1.3 'JetBrains Mono', monospace;
+  font: 500 9px/1.3 'JetBrains Mono', monospace;
 }
-.credential-mark {
-  display: inline-grid; place-items: center; min-width: 19px; height: 19px;
-  padding: 0 4px; border-radius: 5px; background: rgba(0,212,255,.12);
-  color: var(--cyan); font-size: 8px; font-weight: 700;
+.credential-badge {
+  flex: 0 0 40px; width: 40px; height: 40px; object-fit: contain;
+  filter: drop-shadow(0 3px 7px rgba(0,0,0,.28));
 }
-.credential.microsoft .credential-mark { background: rgba(0,120,212,.16); color: #55b5ff; }
-.credential.itil .credential-mark { background: rgba(124,58,237,.18); color: #b79aff; }
-.credential.pmi .credential-mark { background: rgba(249,115,22,.16); color: #ff9a55; }
-.credential.hdi .credential-mark { background: rgba(57,229,140,.12); color: #58e9a0; }
+.credential-badge.hdi-badge { padding: 5px 2px; }
+@media (max-width: 1180px) { .credentials-list { grid-template-columns: repeat(2, minmax(150px, 1fr)); } }
+@media (max-width: 620px) { .credentials-list { grid-template-columns: 1fr; } }
 .home-manifesto { align-self: center; }
 .about-card { padding: 32px; }
 .about-kicker {
@@ -1152,7 +1153,6 @@ body {
       </div>
       <div class="home-cta">
         <button type="button" class="btn-primary panel-trigger" data-panel="p-portfolio">Ver projetos</button>
-        <a href="assets/Josue_Santos_Data_Engineer.pdf" download class="btn-ghost" aria-label="Baixar currículo de Josué Santos em PDF">Baixar currículo ↓</a>
         <a href="https://www.linkedin.com/in/josu%C3%A9-santos231119/" target="_blank" rel="noopener noreferrer" class="btn-ghost" aria-label="Abrir LinkedIn de Josué Santos">LinkedIn ↗</a>
         <a href="https://github.com/santosalmeida1708" target="_blank" rel="noopener noreferrer" class="btn-ghost" aria-label="Abrir GitHub de Josué Santos">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> GitHub
@@ -1161,14 +1161,14 @@ body {
       <div class="credentials-block" aria-labelledby="credentials-title">
         <div class="credentials-title" id="credentials-title">Certificações &amp; credenciais</div>
         <ul class="credentials-list">
-          <li class="credential microsoft" title="Microsoft Certified: Power BI Data Analyst Associate"><span class="credential-mark">MS</span>PL-300</li>
-          <li class="credential itil" title="ITIL 4 Foundation"><span class="credential-mark">ITIL</span>Foundation</li>
-          <li class="credential itil" title="ITIL 4 Practitioner: Incident Management"><span class="credential-mark">ITIL</span>Incident Management</li>
-          <li class="credential pmi" title="PMI Certified Associate in Project Management"><span class="credential-mark">PMI</span>CAPM</li>
-          <li class="credential" title="KCS Knowledge-Centered Service"><span class="credential-mark">KCS</span>Knowledge-Centered Service</li>
-          <li class="credential hdi" title="HDI Support Center Analyst"><span class="credential-mark">HDI</span>SCA</li>
-          <li class="credential hdi" title="HDI Technical Support Professional"><span class="credential-mark">HDI</span>TSPS</li>
-          <li class="credential" title="Scrum Foundation"><span class="credential-mark">SF</span>Scrum Foundation</li>
+          <li class="credential" title="Microsoft Certified: Power BI Data Analyst Associate"><img class="credential-badge" src="assets/certifications/pl-300.png" alt="Brasão Microsoft Power BI Data Analyst Associate">PL-300</li>
+          <li class="credential" title="ITIL 4 Foundation"><img class="credential-badge" src="assets/certifications/itil-foundation.png" alt="Brasão ITIL 4 Foundation da PeopleCert">ITIL 4 Foundation</li>
+          <li class="credential" title="ITIL 4 Practitioner: Incident Management"><img class="credential-badge" src="assets/certifications/itil-incident-management.png" alt="Brasão ITIL 4 Practitioner Incident Management da PeopleCert">ITIL Incident Management</li>
+          <li class="credential" title="PMI Certified Associate in Project Management"><img class="credential-badge" src="assets/certifications/capm.png" alt="Brasão CAPM do Project Management Institute">PMI CAPM</li>
+          <li class="credential" title="KCS Knowledge-Centered Service"><img class="credential-badge hdi-badge" src="assets/certifications/hdi.png" alt="Logo oficial HDI">KCS Knowledge-Centered Service</li>
+          <li class="credential" title="HDI Support Center Analyst"><img class="credential-badge hdi-badge" src="assets/certifications/hdi.png" alt="Logo oficial HDI">HDI SCA</li>
+          <li class="credential" title="HDI Technical Support Professional"><img class="credential-badge hdi-badge" src="assets/certifications/hdi.png" alt="Logo oficial HDI">HDI TSPS</li>
+          <li class="credential" title="Scrum Foundation Professional Certification"><img class="credential-badge" src="assets/certifications/scrum-foundation.png" alt="Brasão Scrum Foundation da CertiProf">Scrum Foundation</li>
         </ul>
       </div>
       <div class="floating-tags">
@@ -1199,7 +1199,7 @@ body {
           <li>Modelagem analítica, testes e documentação com dbt</li>
           <li>Visão de operação, governança, SLA e valor para o negócio</li>
         </ul>
-        <div class="availability"><span class="availability-dot"></span>Aberto a conexões e oportunidades em Engenharia de Dados</div>
+        <div class="availability"><span class="availability-dot"></span>Aberto a conexões na área de Dados</div>
       </div>
     </div>
 
@@ -1579,12 +1579,11 @@ body {
     <div class="contact-strip" id="contato">
       <div>
         <h3>Vamos construir dados confiáveis?</h3>
-        <p>Estou aberto a conexões, feedbacks e oportunidades em Engenharia de Dados e Analytics Engineering.<br><a class="contact-email" href="mailto:santosalmeidajs@gmail.com">santosalmeidajs@gmail.com</a></p>
+        <p>Estou aberto a conexões e trocas sobre Engenharia de Dados e Analytics Engineering.<br><a class="contact-email" href="mailto:santosalmeidajs@gmail.com">santosalmeidajs@gmail.com</a></p>
       </div>
       <div class="contact-actions">
         <a class="btn-primary" href="mailto:santosalmeidajs@gmail.com">Enviar e-mail</a>
         <a class="btn-primary" href="https://www.linkedin.com/in/josu%C3%A9-santos231119/" target="_blank" rel="noopener noreferrer">Conversar no LinkedIn ↗</a>
-        <a class="btn-ghost" href="assets/Josue_Santos_Data_Engineer.pdf" download>Baixar currículo ↓</a>
         <a class="btn-ghost" href="https://github.com/santosalmeida1708" target="_blank" rel="noopener noreferrer">Explorar GitHub ↗</a>
       </div>
     </div>
